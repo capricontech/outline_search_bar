@@ -1,6 +1,6 @@
 name: outline_search_bar
 description: This package allows you to create an outlined Material design search bar.
-version: 2.3.0
+version: 2.3.1
 homepage: https://github.com/Dev-hwang/outline_search_bar
 
 environment:

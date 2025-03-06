@@ -1,3 +1,7 @@
+## 2.3.1
+
+* Modified to with complience with flutter update 3.19
+
 ## 2.3.0
 
 * Upgrade `simple_text_field: ^2.1.0`
