@@ -1,4 +1,4 @@
-library outline_search_bar;
+//library outline_search_bar;
 
 import 'dart:async';
 import 'package:flutter/material.dart';
@@ -301,8 +301,8 @@ class _OutlineSearchBarState extends State<OutlineSearchBar>
       cursorRadius: widget.cursorRadius,
       autocorrect: widget.autoCorrect,
       enableSuggestions: widget.enableSuggestions,
-      ignoreWhiteSpace: widget.ignoreWhiteSpace,
-      ignoreSpecialChar: widget.ignoreSpecialChar,
+      allowWhiteSpace: !widget.ignoreWhiteSpace,
+      allowSpecialCharacters: !widget.ignoreSpecialChar,
       decoration: SimpleInputDecoration(
         icon: widget.icon,
         hintText: widget.hintText,
@@ -311,13 +311,13 @@ class _OutlineSearchBarState extends State<OutlineSearchBar>
         contentPadding: widget.textPadding,
         // isDense: true,
         // removeBorder: true,
-        simpleBorder: true,
-        borderWidth: 0.0,
-        focusedBorderWidth: 0.0,
-        borderColor: Colors.transparent,
-        errorBorderColor: Colors.transparent,
-        focusedBorderColor: Colors.transparent,
-        focusedErrorBorderColor: Colors.transparent,
+        simpleBorder: const SimpleInputBorder(
+            color: Colors.transparent,
+            errorColor: Colors.transparent,
+            focusedErrorColor: Colors.transparent,
+            focusedColor: Colors.transparent,
+            width: 0.0,
+            focusedWidth: 0.0),
       ),
       onTap: widget.onTap,
       onChanged: (String value) {
